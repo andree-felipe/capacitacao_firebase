@@ -1,24 +1,23 @@
-import 'package:capacitacao_firebase/pages/loading_page.dart';
+import 'package:capacitacao_firebase/pages/auth_page.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+main() => runApp( MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+  final ThemeData tema = ThemeData();
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      home: const AuthPage(),
+      debugShowCheckedModeBanner: false,
+      title: 'ToDo App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoadingPage(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
