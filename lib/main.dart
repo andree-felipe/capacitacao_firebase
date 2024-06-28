@@ -1,7 +1,7 @@
 import 'package:capacitacao_firebase/pages/auth_page.dart';
 import 'package:flutter/material.dart';
 
-main() => runApp( MyApp());
+main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
