@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:capacitacao_firebase/componentes/user_image_picker.dart';
 import 'package:flutter/material.dart';
 
-import '../models/auth_form_data.dart';
+import '../core/models/auth_form_data.dart';
 
 class AuthForm extends StatefulWidget {
   final void Function(AuthFormData) onSubmit;
@@ -78,6 +78,7 @@ class _AuthFormState extends State<AuthForm> {
                 initialValue: _formData.email,
                 onChanged: (email) => _formData.email = email,
                 decoration: const InputDecoration(labelText: 'E-mail'),
+                // ignore: no_leading_underscores_for_local_identifiers
                 validator: (_email) {
                     final email = _email ?? '';
                     if(!email.contains('@')) {
@@ -92,6 +93,7 @@ class _AuthFormState extends State<AuthForm> {
                 onChanged: (password) => _formData.password = password,
                 obscureText: true,
                 decoration: const InputDecoration(labelText: 'Senha'),
+                // ignore: no_leading_underscores_for_local_identifiers
                 validator: (_password) {
                     final password = _password ?? '';
                     if(password.length < 6) {
