@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:capacitacao_firebase/core/services/auth/auth_mock_service.dart';
+
 import '../../models/app_user.dart';
 
 abstract class AuthService {
@@ -11,7 +13,7 @@ abstract class AuthService {
     String nome,
     String email,
     String password,
-    File image,
+    File? image,
   );
 
   Future<void> login(
@@ -20,4 +22,8 @@ abstract class AuthService {
   );
 
   Future<void> logout();
+
+  factory AuthService() {
+    return AuthMockService();
+  }
 }

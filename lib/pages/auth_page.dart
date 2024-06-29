@@ -2,6 +2,7 @@ import 'package:capacitacao_firebase/componentes/auth_form.dart';
 import 'package:flutter/material.dart';
 
 import '../core/models/auth_form_data.dart';
+import '../core/services/auth/auth_service.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
@@ -18,10 +19,11 @@ class _AuthPageState extends State<AuthPage> {
       setState(() => _isLoading = true);
 
       if(formData.isLogin) {
-
+        // Login
+        await AuthService().login(formData.email, formData.password);
       }
       else {
-
+        await AuthService().signup(formData.name, formData.email, formData.password, formData.image);
       }
     }
     catch (error){
