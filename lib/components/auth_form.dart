@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:capacitacao_firebase/componentes/user_image_picker.dart';
+import 'package:capacitacao_firebase/components/user_image_picker.dart';
 import 'package:flutter/material.dart';
 
 import '../core/models/auth_form_data.dart';

@@ -1,4 +1,4 @@
-import 'package:capacitacao_firebase/componentes/auth_form.dart';
+import 'package:capacitacao_firebase/components/auth_form.dart';
 import 'package:flutter/material.dart';
 
 import '../core/models/auth_form_data.dart';
